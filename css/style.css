@@ -1,0 +1,147 @@
+@font-face {
+  font-family: red-hat-text;
+  src: url("../fonts/redHatText.ttf");
+}
+@font-face {
+  font-family: open-sans;
+  src: url("../fonts/openSans.ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: open-sans, sans-serif;
+}
+
+html, body {
+  min-height: 100%;
+  width: 100%;
+}
+
+.main {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.padding-sides {
+  line-height: 2em;
+}
+@media (orientation: landscape) {
+  .padding-sides {
+    width: min(900px, 100%);
+    margin-left: max((100% - 900px) / 2, 0px);
+  }
+}
+
+h1 {
+  font-family: red-hat-text, sans-serif;
+  font-weight: 700;
+  background-color: #1a2633;
+  color: white;
+  padding: 10px;
+}
+
+p {
+  padding-bottom: 1em;
+}
+
+.slight-padding-left {
+  padding-left: 1em;
+}
+@media (orientation: landscape) {
+  .slight-padding-left {
+    padding-left: 5em;
+  }
+}
+
+.splash {
+  height: 100vh;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  background-color: #85a5bb;
+  color: #1a2633;
+}
+
+.title-text {
+  font-size: 5em;
+  font-family: red-hat-text, sans-serif;
+  font-weight: 500;
+  letter-spacing: -5px;
+}
+.title-text:first-of-type {
+  -webkit-text-stroke: 1.5px #1a2633;
+  color: white;
+}
+
+.subtitle-text {
+  font-family: red-hat-text;
+}
+
+.flex-column {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.flex-row {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+@media (orientation: landscape) {
+  .down-arrow {
+    width: 10px;
+    margin-right: 30px;
+    background-color: #1a2633;
+    position: relative;
+  }
+  .down-arrow::after {
+    display: block;
+    position: absolute;
+    bottom: -0.8px;
+    transform: rotatez(-45deg);
+    right: 125%;
+    content: "";
+    height: 30px;
+    width: 10px;
+    background-color: #1a2633;
+  }
+}
+
+.info-section {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  margin: 50px 0 50px 0;
+  display: flex;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.info-section > span, .info-section p {
+  margin: 0 10px 0 10px;
+}
+.info-section > div {
+  width: 100%;
+}
+.info-section .info-content {
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  max-height: 300px;
+  transition: all 0.2s;
+}
+.info-section input[type=checkbox] {
+  display: none;
+}
+.info-section:has(input[type=checkbox]:checked) {
+  cursor: auto;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.19), 0 0px 0px rgba(0, 0, 0, 0.23);
+}
+.info-section:has(input[type=checkbox]:checked) .info-content {
+  max-height: 100%;
+}
+
+.gallery {
+  width: 100%;
+}
+.gallery > img {
+  max-width: 100%;
+  max-height: 300px;
+}/*# sourceMappingURL=style.css.map */
