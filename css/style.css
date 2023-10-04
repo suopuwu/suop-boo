@@ -26,6 +26,11 @@ html, body {
   box-sizing: border-box;
   line-height: 2em;
 }
+@media (orientation: portrait) {
+  .padding-sides {
+    margin: 0 10px 0 10px;
+  }
+}
 @media (orientation: landscape) {
   .padding-sides {
     width: min(1300px, 100%);
