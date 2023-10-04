@@ -63,8 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
             title: 'Bite Sized Projects',
             skills: ['Javascript', 'Sass / css', 'Node.js'],
             paragraphs: [
-                `<h2>Totally Original Platformer</h2>
-                TODO`,
+                `<h2>Totally Original Platformer</h2> <img class="lightbox-target" src="img/tog1.png">
+                This is a project that is pretty dear to my heart. I've always loved video games, and making my own seemed like the natural conclusion of that. I didn't get very far, and the 1000ish lines of code are buggy at times, but I'll always love this project for what it was. You can play it <a href="https://suopuwu.github.io/totallyOriginalGame">here</a>. The controls for player 1 are wasd and space, ijkl and p for player 2.`,
+
+                `<h2>Hacker Redirect</h2> <img class="lightbox-target" src="img/hr1.png">
+                Back when I did more presentations, I needed a way to bring my presentations to class without bringing a flash drive, because that was lame. That's why I made this: a simple redirect website that displays a joke before going to the page. Try it <a href="https://suopuwu.github.io/hackerRedirect">here</a>.`,
             ],
         },
         {
