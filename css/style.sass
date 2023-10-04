@@ -23,19 +23,37 @@ html, body
     flex-flow: column nowrap
 
 .padding-sides
-    $width: 900px
+    $width: 1300px
+    box-sizing: border-box
     line-height: 2em
     @media (orientation: landscape)
         width: min($width, 100%)
-
+        display: grid
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr))
+        gap: 2em
+        padding: 2em
         margin-left: max(calc((100% - $width) / 2), 0px)
 
 h1
+    position: relative
     font-family: red-hat-text, sans-serif
     font-weight: 700
     background-color: $secondary
     color: $tertiary
     padding: 10px
+    &::after
+        bottom: 5%
+        right: 0
+        display: block
+        position: absolute
+        content: ""
+        // background-color: white
+        height: 100%
+        width: calc(1em + 20px)
+        $thickness: 10px
+        border-right: $thickness $tertiary solid
+        border-bottom: $thickness $tertiary solid
+        transform: rotateZ(45deg) scale(0.4)
 
 p
     padding-bottom: 1em
@@ -57,7 +75,7 @@ p
     font-size: 5em
     font-family: red-hat-text, sans-serif
     font-weight: 500
-    letter-spacing: -5px
+    letter-spacing: -6px
     &:first-of-type
         -webkit-text-stroke: 1.5px $secondary
         color: $tertiary
@@ -90,31 +108,24 @@ p
             width: 10px
             background-color: $secondary
 
-.info-section
-    $size: 300px
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
-    margin: 50px 0 50px 0
+.info-label
+    margin-top: 50px
     display: flex
+    flex-flow: column
     cursor: pointer
-    transition: all 0.2s
-
-    > span, p
-        margin: 0 10px 0 10px
-    > div
-        width: 100%
-    .info-content
-        width: 100%
-        overflow-y: hidden
-        overflow-x: hidden
-        max-height: $size
-        transition: all 0.2s
     & input[type="checkbox"]
         display: none
-    &:has(input[type="checkbox"]:checked)
+    &:has(input[type="checkbox"]:checked) + .info-content-wrapper
         cursor: auto
-        box-shadow: 0 0px 0px rgba(0,0,0,0.19), 0 0px 0px rgba(0,0,0,0.23)
-        .info-content
-            max-height: 100%
+        grid-template-rows: 1fr
+
+.info-content-wrapper
+    display: grid
+    grid-template-rows: 0fr
+    transition: 0.2s all
+
+.info-content
+    overflow: hidden
 
 .gallery
     width: 100%
@@ -123,5 +134,30 @@ p
         max-height: 300px
 
 .skills-list
+    display: flex
+    flex-flow: row wrap
 
 .skill
+    background-color: $primary
+    color: $secondary
+    padding: 5px
+    border-radius: 10px
+    white-space: nowrap
+footer
+    background-color: $secondary
+    padding: 50px
+    color: $tertiary
+    margin-top: 50px
+
+a
+    color: $primary
+    &:visited
+        color: $primary
+
+img
+    max-width: 100%
+
+.lightbox-target
+    cursor: pointer
+    border: 1px solid $secondary
+    max-width: calc( 100% - 2px )
