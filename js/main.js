@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 `<img class="lightbox-target" src="img/bbn1.png"> For nearly as long as I can remember, I've played Smash Bros. It was in middle school that I got serious about it and started entering tournaments. Throughout my time competing, I would study gameplay to try and improve as much as possible. This helped, but I always felt like I would forget the lessons I learned. That's why I made Big Brain Notes. Though a normal note taking app might work, they often didn't support images, and they were not organized for my specific use case.`,
                 `I started by opening a notebook and writing down all the things that I would want a notes app to do. After that, I drew mockups of the various screens and how they would flow together. Throughout the process, I was laser focused on creating a good experience: quite literally an app I would want to use. I had to learn Flutter from scratch. It was a difficult process, as this was the first big project that I had ever undertaken. Despite that, the hundreds of hours spent learning and programming were worth it. Not only did the app get rave reviews online, it also helped me get ranked number one in my state for a time.`,
                 `There are two versions: a mobile and a web version. The web version is incomplete, but it still served as a valuable project to learn how to use firebase. The mobile version currently has a 4.9 star rating on the Google Play store. Here are some reviews:`,
-                `Fantastic tool for pros and amatuers looking to improve their matchup game. FIXED WHITE SCREEN GLITCH. I had this issue and I just emailed the creator and they were super helpful and got back to me very quickly! They had fixed the issue by the next day! App is super useful and really well put together! Exactly what I needed. A requirement for any serious competitor!`,
+                `<img class="lightbox-target" src="img/bbn2.png"><img class="lightbox-target" src="img/bbn3.png"><img class="lightbox-target" src="img/bbn4.png">`,
             ],
         },
         {
@@ -126,6 +126,8 @@ function createSectionHtml(title, skills, images, paragraphs) {
         for (let paragraph of paragraphs) {
             returnString += `<p>${paragraph}</p>`
         }
+        console.log(returnString)
+
         return returnString
     }
 
