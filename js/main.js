@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'SQL',
             ],
             paragraphs: [
-                `<img class="lightbox-target" src="img/sc1.png"> This was a project I made for my father. He runs a one-man company that makes nursery signs for new parents. Like many other handmade goods companies, it got its start on Etsy. Unfortunately, Etsy's policies gradually grew more and more hostile to its sellers over time. As such, My father had me make an ecommerce website to replace his Etsy shop. Written using Asp.net with Razor Pages and EF Core, it's a simple storefront that uses stripe to process payments.`,
+                `<img class="lightbox-target" src="img/sc1.png"> This was a project I made for my father. He ran a one-man company that made nursery signs for new parents. Like many other handmade goods companies, it got its start on Etsy. Unfortunately, Etsy's policies gradually grew more and more hostile to its sellers over time. As such, My father had me make an ecommerce website to replace his Etsy shop. Written using Asp.net with Razor Pages and EF Core, it's a simple storefront that uses stripe to process payments.`,
                 `I hadn't ever undertaken a project in C# before, but I dove into development. I gained valuable experience using all the technologies involved, from Azure services to Postgres. My father didn't want to edit the code himself, so I made an admin page with ui for adding products.`,
                 `The website is not available due to unrelated reasons, but the code is available on <a href="https://github.com/suopuwu/suopCommerce">Github</a>.`,
             ],
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'Discrete computing',
             ],
             paragraphs: [
-                `I am currently working towards a bachelor's degree in software engineering, with an art minor at BYU.`,
+                `I finished my bachelor's degree in software engineering in 2025 at BYU.`,
             ],
         },
     ]
