@@ -130,8 +130,8 @@ p {
   }
 }
 
-.info-sections-container {
-      min-height: 80vh;
+#info-sections-container {
+  min-height: 80vh;
 }
 
 .info-label {
